@@ -1,1 +1,13 @@
+import pandas as pd
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import layers, models, regularizers
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.metrics import classification_report, confusion_matrix
 
+# Step 1: Load data
+train = pd.read_csv('data/data_set_ALL_AML_train.csv')
+independent = pd.read_csv('data/data_set_ALL_AML_independent.csv')
+actual = pd.read_csv('data/actual.csv')
